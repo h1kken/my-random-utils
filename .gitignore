@@ -1,0 +1,9 @@
+# envs
+.env
+
+# Sochi County Time Booster paths
+Sochi County Time Booster/Logs/
+Sochi County Time Booster/Results/
+
+# trash
+*.txt
