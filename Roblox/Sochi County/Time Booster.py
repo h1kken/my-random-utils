@@ -282,7 +282,7 @@ async def get_job_id() -> str:
         return SERVER_IDS['dynamic']
 
     server_id = None
-    data = (await send_get_request_roblox(f'https://games.roblox.com/v1/games/{PLACE_ID}/servers/{'1' if JOIN_TO_FRIENDS else '0'}?sortOrder=1&excludeFullGames=true&limit=50', cookies=None))['data']
+    data = (await send_get_request_roblox(SERVER_IDS_API, cookies=None))['data']
     if RANDOM_SERVER_ID:
         while not server_id or server_id in AVOID_SERVER_IDS:
             if 0 < len(data) - 1:
